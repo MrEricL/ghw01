@@ -12,18 +12,14 @@ def write_header(f,w,h):
 
 def color(f,w,h):
 	wi = 0
-	hi = 0
 	for each in range(w):
-		if wi < 100 and hi <50:
+		if wi < 100:
 			for other in range(h):
 				f.write("255 215 0 ")
-				hi+=1
 		else:
 			for other in range(h):
 				f.write("0 191 255 ")
-				hi+=1
 		wi+=1
-		hi = 0
 
 
 with open(fname,"w") as file:
